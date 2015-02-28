@@ -1,0 +1,18 @@
+enabled=True
+<% if defined?(@options)
+     @options.keys.sort.each do |k| -%>
+<%= "#{k} = #{@options[k]}" %>
+<%   end
+   end -%>
+<% if defined?(@sections)
+     @sections.each do |s|
+       s.each do |t|
+         if ! t.is_a? String -%>
+<%= "#{t[0]} = #{t[1]}" %>
+<%       else -%>
+<%= "#{t}" %>
+<%       end
+       end   
+     end
+   end -%>
+

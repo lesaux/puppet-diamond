@@ -1,0 +1,17 @@
+{
+  "name": "lesaux-diamond",
+  "version": "0.0.1",
+  "author": "lesaux",
+  "summary": "Install the Diamond metrics collector",
+  "license": "Apache 2.0",
+  "source": "https://github.com/lesaux/puppet-diamond.git",
+  "project_page": "https://github.com/lesaux/puppet-diamond",
+  "issues_url": "https://github.com/lesaux/puppet-diamond/issues",
+  "dependencies": [
+    {
+      "version_range": ">= 1.0.0",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
