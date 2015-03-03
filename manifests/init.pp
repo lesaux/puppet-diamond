@@ -4,7 +4,7 @@
 #
 # === Parameters
 # [*version*]
-#   The package version to install
+#   The diamond version to install. If install_method is archive it must be a git release, if install_method is git it must be a git revision.
 #
 # [*enable*]
 #   Should the service be enabled during boot time?
@@ -58,8 +58,8 @@
 #   Number of days of rotate logs to keep
 #
 class diamond(
-  $version          = '4.0',
-  $install_method   = 'archive',
+  $version          = '4.0-85-gfb729f8',
+  $install_method   = 'git',
   $enable           = true,
   $start            = true,
   $interval         = 30,
@@ -88,10 +88,12 @@ class diamond(
 #  Class['diamond']
   class{'diamond::prereqs': }->
   class{'diamond::archive': }->
+  class{'diamond::git': }->
   class{'diamond::compile': }->
   class{'diamond::install': }->
   class{'diamond::config': } ~>
   class{'diamond::service': }->
+
 Class['diamond']
 
 }
