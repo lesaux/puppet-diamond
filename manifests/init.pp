@@ -81,11 +81,7 @@ class diamond(
   $handlers_path    = undef,
   $purge_collectors = false,
 ) {
-#  class{'diamond::repo': } ->
-#  class{'diamond::install': } ->
-#  class{'diamond::config': } ~>
-#  class{'diamond::service': } ->
-#  Class['diamond']
+
   class{'diamond::prereqs': }->
   class{'diamond::archive': }->
   class{'diamond::git': }->
