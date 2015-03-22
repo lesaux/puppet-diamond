@@ -43,7 +43,7 @@ if $diamond::install_method == git {
     $strippedversion  = regsubst( $diamond::version, '-[^-]*$', '' )
     $version  = regsubst( $strippedversion, '\-', '.' )
 
-    notify {"version compile is $version": }
+    #notify {"version compile is $version": }
 
   case $::osfamily {
     'redhat': {
