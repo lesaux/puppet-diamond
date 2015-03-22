@@ -9,7 +9,7 @@ if $diamond::install_method == git {
     $strippedversion  = regsubst( $diamond::version, '-[^-]*$', '' )
     $version  = regsubst( $strippedversion, '\-', '.' )
 
-    notify {"version is $version": }
+    #notify {"version is $version": }
 
 } else {
  
